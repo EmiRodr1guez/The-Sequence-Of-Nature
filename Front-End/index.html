@@ -2,9 +2,106 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sequence of Nature</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<header class="header py-4 text-center">
+    <h1 class="display-4">The Sequence of Nature</h1>
+</header>
+
+
+<main class="container">
+    <div class="jumbotron text-center">
+        <h2 class="display-5">Welcome to our Music Library</h2>
+        <p class="lead">Discover a collection of amazing songs from various artists and albums.</p>
+    </div>
+
+    <div class="input-group mb-3 search-container">
+        <input type="text" class="search-input form-control rounded-right" id="search-input" placeholder="Search for music...">
+        <div class="input-group-append">
+            <button class="search-button btn btn-primary" id="search-button">Search</button>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card p-4">
+                <h2 class="song-title mb-4">Song Title</h2>
+                <p class="song-details artist-name">Artist Name</p>
+                <p class="song-details album-name">Album Name</p>
+                <audio controls class="audio-player w-100">
+                    <source src="music-preview.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="footer-text">
+        <p>Made with 💓 by Emiliano Rodriguez & Ruben Vasquez</p>
+    </div>
+
+    <div class="footer-iconTop">
+        <a href="#home"><i class="bx bx-up-arrow-alt"></i></a>
+    </div>
+</footer>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+
+    //I CHATGPTd this. . This is where the Java comes in
+    // I just needed a placeholder so I could design the site.
+    //I commented it out. No cheating bruh.
+    // Still got some front-end to do then Ill help you out.
+    //But yeah, this should be it. Anything I need to add afterwards ill figure out towards the end.
+    //But the shell is done.
+    //The search button executed the script jsut fyi. Not sure if we can tie a function in java to it.
+
+    /*
+    document.addEventListener('DOMContentLoaded', function () {
+        const searchButton = document.getElementById('search-button');
+        const searchInput = document.getElementById('search-input');
+        const musicCard = document.querySelector('.music-card');
+        const songTitle = document.querySelector('.song-title');
+        const artistName = document.querySelector('.artist-name');
+        const albumName = document.querySelector('.album-name');
+        const audioPlayer = document.querySelector('.audio-player');
+
+        searchButton.addEventListener('click', function () {
+            // Simulate fetching song details from an API or database
+            // Replace this with actual API request or data fetching logic
+            const searchTerm = searchInput.value;
+
+            // For demonstration, using dummy data
+            const dummySongData = {
+                title: 'Awesome Song',
+                artist: 'Amazing Artist',
+                album: 'Fantastic Album',
+                audioSrc: 'music-preview.mp3'
+            };
+
+            // Update song details and show music card
+            updateSongDetails(dummySongData);
+            musicCard.style.display = 'block';
+        });
+
+        function updateSongDetails(data) {
+            songTitle.textContent = data.title;
+            artistName.textContent = data.artist;
+            albumName.textContent = data.album;
+            audioPlayer.src = data.audioSrc;
+        }
+    });
+*/
+</script>
 </body>
 </html>
