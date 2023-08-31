@@ -13,3 +13,5 @@ A web based application that analyses the frequency data (Hz) of a desired/uploa
 <ul>SpringBoot (Back-end engine)</ul>
 <ul>ThyMeLeaf (HTML templating engine)</ul>
 <ul>MongoDB (Database engine)</ul>
+
+## What we've learned with this project
