@@ -36,46 +36,36 @@ def freq(file, start_time, end_time):
     # plt.show()
 
     # Get the most dominant frequency and return it
-    idx = np.argmax(np.abs(yf))
+    idx = np.argmax(np.abs(yf)) # type: ignore
     computed_freq = xf[idx]
     return computed_freq
 
 
+
+
 # Home/Main page route, ideally where the song will be uploaded
 @app.route("/", methods=["GET", "POST"])
-def get_all_posts():
-    # Here is where a POST request will be received from user, within the request, their song
-    # For now we will use this as placeholder, this is indeed a local song in the directory
-    freq_as_str = str(freq(file='ZoePanspermia.wav', start_time=0, end_time=3))
+def get_all_posts() -> str:
+    if request.method == "POST":
+        # Handle the form submission here, and call the freq function
+        computed_freq = freq(file=request.files["wav_file"], start_time=0, end_time=3)
+        return render_template("result.html", computed_freq=computed_freq)
     return render_template("index.html", all_posts=posts)
-
-
-# TODO for Emi: you wont need this route but it is just here so you can understand and get familiar with the concepts
-@app.route("/post/<int:index>")
-def show_post(index):
-    requested_post = None
-    for blog_post in posts:
-        if blog_post["id"] == index:
-            requested_post = blog_post
-    return render_template("post.html", post=requested_post)
-
 
 # Route for about page
 @app.route("/about")
-def about():
+def about() -> str:
     return render_template("about.html")
-
 
 # A route for a contact page if we'll implement this feature
 @app.route("/contact", methods=["GET", "POST"])
-def contact():
+def contact() -> str:
     if request.method == "GET":
         return render_template("contact.html", message="Contact Me")
     else:
         data = request.form
         send_email(data["name"], data["email"], data["phone"], data["message"])
         return render_template("contact.html", message="Successfully sent your message!")
-
 
 # Function to contact developers through email
 def send_email(name, email, phone, message):
@@ -84,7 +74,6 @@ def send_email(name, email, phone, message):
         connection.starttls()
         connection.login(EMAIL, EMAIL_PW)
         connection.sendmail(from_addr=email, to_addrs=EMAIL, msg=email_message)
-
 
 # Flask server instantiation
 if __name__ == "__main__":

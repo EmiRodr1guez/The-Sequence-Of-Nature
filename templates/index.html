@@ -1,45 +1,71 @@
 {% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The sequence of Nature</title>
 
-        <!-- Page Header-->
-<!--        <header class="masthead" style="background-image: url({{ url_for('static', filename='assets/img/home-bg.jpg') }})">-->
-        <header class="masthead" style="background-image: url('https://images.unsplash.com/photo-1470092306007-055b6797ca72?ixlib=rb-1.2.1&auto=format&fit=crop&w=668&q=80')">
-            <div class="container position-relative px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5 justify-content-center">
-                    <div class="col-md-10 col-lg-8 col-xl-7">
-                        <div class="site-heading">
-                            <h1>Clean Blog</h1>
-                            <span class="subheading">A Blog Theme by Start Bootstrap</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-        <!-- Main Content-->
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 justify-content-center">
-                <div class="col-md-10 col-lg-8 col-xl-7">
+    <!-- Bootstrap CSS (from CDN) -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
 
-                    <!-- Post preview-->
-                    {% for post in all_posts %}
-                    <div class="post-preview">
-                        <a href="{{ url_for('show_post', index=post.id) }}">
-                            <h2 class="post-title">{{ post.title }}</h2>
-                            <h3 class="post-subtitle">{{ post.subtitle }}</h3>
-                        </a>
-                        <p class="post-meta">
-                            Posted by
-                            <a href="#!">{{ post.author }}</a>
-                            on {{ post.date }}
-                        </p>
-                    </div>
-                    <!-- Divider-->
-                    <hr class="my-4" />
-                    {% endfor %}
+    <!-- Montserrat Font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+      rel="stylesheet"
+    />
 
-                    <!-- Pager-->
-                    <div class="d-flex justify-content-end mb-4"><a class="btn btn-primary text-uppercase" href="#!">Older Posts →</a></div>
-                </div>
-            </div>
-        </div>
+    <!-- Concrete CSS. Didnt like bootstrap components and im not paying 99$ to get different styles. -->
+    <style>
+      .search-container {
+        text-align: center;
+        margin-top: 50px;
+      }
 
-{% include "footer.html" %}
+      .search-input {
+        font-size: 1.5rem;
+        padding: 10px;
+        width: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <h1>Find <span style="color: white; text-shadow: 0 0 10px #48abe0;">your</span> Frequency.</h1>
+
+
+
+    </header>
+
+    <form
+      class="form-inline d-flex justify-content-center"
+      action="{{ url_for('get_all_posts') }}"
+      method="POST"
+      enctype="multipart/form-data"
+    >
+      <div class="form-group">
+        <label for="wavFile" class="sr-only">Choose a .WAV File</label>
+        <input
+          type="file"
+          class="form-control-file mb-3"
+          id="wavFile"
+          name="wav_file"
+          accept=".wav"
+          required
+        />
+      </div>
+      <button class="btn btn-primary custom-btn" type="submit">
+        Submit a Song
+      </button>
+    </form>
+
+    <!-- Bootstrap JS and jQuery (from CDN) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+  {% include "footer.html" %}
+</html>

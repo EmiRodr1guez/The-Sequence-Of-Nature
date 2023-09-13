@@ -1,0 +1,29 @@
+{% include "header.html" %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequency Analysis Result</title>
+    <!-- Link to Bootstrap CSS (from CDN) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center">Frequency Analysis Result</h1>
+                <div class="card">
+                    <div class="card-body">
+                        <p class="lead">The dominant frequency in the uploaded audio is {{ computed_freq }} Hz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+{% include "footer.html" %}
+</html>
