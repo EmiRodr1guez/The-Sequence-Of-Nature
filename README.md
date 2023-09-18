@@ -25,6 +25,40 @@ of Digital Signal Processing and Audio Engineering like;
 Fast Fourier Transform, Time Domain, Frequency Domain, 
 Dual Channel, Frequency Bins, Hertz, Musical Notes, WAV files, 
 and Pitch, just to name a few.
+
 ### Ruben's notes:
+
 With a basic understanding of these concepts we grasped the ability 
-to build Sequence of Nature.<br>
+to build Sequence of Nature.
+<br>
+<br>
+We discovered that in order to find the frequency of a song a WAV file 
+had to be fed into the program.
+<br>
+Once the WAV file was extracted, the data within the file was then 
+transformed using the exuberant algorithm: Fast Fourier Transform 
+using the SciPy module.
+<br>
+This mathematical algorithm gave us the ability to transform audio 
+data from the Time Domain into the Frequency Domain. Where the algorithm 
+would return an array of Frequency Bins.
+<br>
+Given this array of Frequency Bins, we had the data to begin 
+an analysis among the frequencies played in the song.
+<br>
+Understanding that within each song there is a collection of instruments 
+playing their own series of notes, and considering that each note played 
+by each instrument in the song has its own frequency, within the array of 
+frequency bins there is an absolute vast amount of data to be analyzed.
+<br>
+Considering this observation and considering the limited computational 
+resources in scalability we had to improvise.
+<br>
+We decided that analyzing the most dominant frequencies in the song by how 
+often they are played (not by how loud they are, since that does not determine 
+the frequency of a note, that is Pitch) would be enough to calculate a reasonable 
+frequency from a given song.
+<br>
+NOTE: although it is possible to consider all notes from a given song, this method 
+of analysis would be more adequate with a Machine Learning model who is trained to 
+detect musical notes and process all through a Neural Network.
