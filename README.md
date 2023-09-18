@@ -72,9 +72,9 @@ detect musical notes and process all through a Neural Network.
 <br>
 <br>
 8. Final observations along with their cons/drawbacks:<br> 
-8.1.Data in the WAV file is extremely sensitive, meaning the farther away it is from 
+8.1. Data in the WAV file is extremely sensitive, meaning the farther away it is from 
 “Production” quality, the analysis will be inaccurate.<br>
-8.2.Longer songs over 30seconds is extremely hard to process since the amount of data 
+8.2. Longer songs over 30seconds is extremely hard to process since the amount of data 
 is so big, it causes a scalability issue and can cause the computer to crash, or simply 
 return 0.0 to prevent system failure.
 <br>
