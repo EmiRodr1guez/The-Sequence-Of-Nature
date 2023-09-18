@@ -25,9 +25,6 @@ of Digital Signal Processing and Audio Engineering like;
 Fast Fourier Transform, Time Domain, Frequency Domain, 
 Dual Channel, Frequency Bins, Hertz, Musical Notes, WAV files, 
 and Pitch, just to name a few.
-<br>
-<br>
 ### Ruben's notes:
-<br>
 With a basic understanding of these concepts we grasped the ability 
 to build Sequence of Nature.<br>
