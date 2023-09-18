@@ -14,5 +14,15 @@ A web based application that analyses the frequency data (Hz) of a desired/uploa
 ## What we've learned with this project
 ### Ruben's notes:
 Before this project began a great inspiration 
-for the love of music was taken for this project, 
+for the love for music was taken for this project, 
 the passion for music was the essence of this project.
+<br>
+<br>
+With this deep inspiration, the desire to learn an array 
+of concepts from Digital Signal Processing and Audio 
+Engineering, was born. We soon realized that in order to 
+be successful in this project we must understand concepts 
+of Digital Signal Processing and Audio Engineering like; 
+Fast Fourier Transform, Time Domain, Frequency Domain, 
+Dual Channel, Frequency Bins, Hertz, Musical Notes, WAV files, 
+and Pitch, just to name a few.
