@@ -32,7 +32,6 @@ With a basic understanding of these concepts we grasped the ability
 to build Sequence of Nature.
 <br>
 <br>
-<br>
 1. We discovered that in order to find the frequency of a song a WAV file 
 had to be fed into the program.
 <br>
@@ -72,7 +71,7 @@ of analysis would be more adequate with a Machine Learning model who is trained 
 detect musical notes and process all through a Neural Network.
 <br>
 <br>
-8.Final observations along with their cons/drawbacks:<br> 
+8. Final observations along with their cons/drawbacks:<br> 
 8.1.Data in the WAV file is extremely sensitive, meaning the farther away it is from 
 “Production” quality, the analysis will be inaccurate.<br>
 8.2.Longer songs over 30seconds is extremely hard to process since the amount of data 
@@ -80,6 +79,6 @@ is so big, it causes a scalability issue and can cause the computer to crash, or
 return 0.0 to prevent system failure.
 <br>
 <br>
-Implementing a Machine Learning Model for more accurate frequency analysis and scaling 
+9. Implementing a Machine Learning Model for more accurate frequency analysis and scaling 
 data through Neural Networks would definitely expand and enchant the quality of this web-app 
 until then, Sequence of Nature is yet to experience its metamorphosis.
