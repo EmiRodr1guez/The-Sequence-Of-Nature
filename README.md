@@ -12,4 +12,7 @@ A web based application that analyses the frequency data (Hz) of a desired/uploa
 <ul>Jinja2 (HTML templating engine)</ul>
 
 ## What we've learned with this project
-### R.V. notes:
+### Ruben's notes:
+Before this project began a great inspiration 
+for the love of music was taken for this project, 
+the passion for music was the essence of this project.
