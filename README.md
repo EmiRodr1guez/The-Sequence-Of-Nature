@@ -32,7 +32,7 @@ With a basic understanding of these concepts we grasped the ability
 to build Sequence of Nature.
 <br>
 <br>
-1.We discovered that in order to find the frequency of a song a WAV file 
+1. We discovered that in order to find the frequency of a song a WAV file 
 had to be fed into the program.
 <br>
 <br>
