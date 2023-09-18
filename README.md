@@ -1,4 +1,4 @@
-﻿# The-Sequence-Of-Nature
+# The-Sequence-Of-Nature
 A web based application that analyses the frequency data (Hz) of a desired/uploaded song and tells you what it is.
 <br>
 <br>
@@ -12,3 +12,4 @@ A web based application that analyses the frequency data (Hz) of a desired/uploa
 <ul>Jinja2 (HTML templating engine)</ul>
 
 ## What we've learned with this project
+###R.V. notes:
